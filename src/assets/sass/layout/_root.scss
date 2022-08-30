@@ -1,0 +1,25 @@
+//
+// Root
+//
+
+// Light mode
+@include theme-light() {
+    // Page bg color
+    --kt-page-bg: #{$page-bg};
+
+    // Header
+    --kt-header-desktop-default-border: #{get($header-config, desktop, default, border)};
+    --kt-header-desktop-fixed-bg-color: #{get($header-config, desktop, fixed, bg-color)};
+    --kt-header-desktop-fixed-box-shadow: #{get($header-config, desktop, fixed, box-shadow)};
+}
+
+// Dark mode
+@include theme-dark() {
+    // Page bg color
+    --kt-page-bg: #{$page-bg-dark};
+
+    // Header
+    --kt-header-desktop-default-border: #{get($header-config, desktop, default, border-dark)};
+    --kt-header-desktop-fixed-bg-color: #{get($header-config, desktop, fixed, bg-color-dark)};
+    --kt-header-desktop-fixed-box-shadow: #{get($header-config, desktop, fixed, box-shadow-dark)};
+}
